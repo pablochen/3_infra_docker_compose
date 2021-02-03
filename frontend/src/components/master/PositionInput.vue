@@ -29,7 +29,7 @@ export default {
         positionName : positionRow.name
       }
 
-      const baseURI = 'http://localhost:8080';
+      const baseURI = 'http://localhost:8080/api';
       this.$http.post(`${baseURI}/master/setPosition`, data)
       .then(res => {
         this.$emit('reRender', 'PositionList')

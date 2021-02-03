@@ -17,7 +17,7 @@ export default {
   },
   methods: {
     getUserList: function() {
-      const baseURI = 'http://localhost:8080';
+      const baseURI = 'http://localhost:8080/api';
       this.$http.get(`${baseURI}/master/getUserList`)
       .then((result) => {
         this.$refs.tuiGrid.invoke('appendRows', result.data.content);
@@ -29,7 +29,7 @@ export default {
         for (let i in keys){ userIds.push(keys[i].userId)}
         const data = {userIds : userIds}
         console.log(data);
-        const baseURI = 'http://localhost:8080';
+        const baseURI = 'http://localhost:8080/api';
         this.$http.put(`${baseURI}/master/deleteUsers`, data)
         .then((result) => {
           this.$refs.tuiGrid.invoke('removeCheckedRows');

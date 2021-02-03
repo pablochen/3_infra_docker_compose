@@ -31,7 +31,7 @@ export default {
   methods: {
     getVacationHistList: function(key) {
       const data = { params:{ userId : 0 } }
-      const baseURI = 'http://localhost:8080';
+      const baseURI = 'http://localhost:8080/api';
 
       this.$http.get(`${baseURI}/vacation/getVacationHistList`, data)
       .then((result) => {

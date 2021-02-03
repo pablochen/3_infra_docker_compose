@@ -46,7 +46,7 @@ export default {
   },
   methods: {
     getVacationList: function() {
-      const baseURI = 'http://localhost:8080';
+      const baseURI = 'http://localhost:8080/api';
       this.$http.get(`${baseURI}/master/getVacationList`)
       .then((result) => {
         this.vacationItems = result.data.content

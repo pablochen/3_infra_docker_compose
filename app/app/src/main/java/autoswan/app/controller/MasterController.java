@@ -25,7 +25,7 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/master")
+@RequestMapping("/api/master")
 public class MasterController {
     @Autowired
     EntityManager em;

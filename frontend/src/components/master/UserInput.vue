@@ -40,7 +40,7 @@ export default {
         joinDate : userRow.joinDate
       }
 
-      const baseURI = 'http://localhost:8080';
+      const baseURI = 'http://localhost:8080/api';
       this.$http.post(`${baseURI}/master/setUser`, data)
       .then(res => {
         this.$emit('reRender', 'UserList')

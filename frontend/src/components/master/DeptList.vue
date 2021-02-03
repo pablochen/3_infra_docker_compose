@@ -16,7 +16,7 @@ export default {
   },
   methods: {
     getDeptList: function() {
-      const baseURI = 'http://localhost:8080';
+      const baseURI = 'http://localhost:8080/api';
       this.$http.get(`${baseURI}/master/getDeptList`)
       .then((result) => {
         this.$refs.tuiGrid.invoke('appendRows', result.data.content)

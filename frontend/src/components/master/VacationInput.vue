@@ -29,7 +29,7 @@ export default {
         days : vacationRow.days
       }
 
-      const baseURI = 'http://localhost:8080';
+      const baseURI = 'http://localhost:8080/api';
       this.$http.post(`${baseURI}/master/setVacation`, data)
       .then(res => {
         this.$emit('reRender', 'VacationList')

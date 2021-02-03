@@ -60,7 +60,7 @@ export default {
         "Content-Type": "application/json"
       }
 
-      const baseURI = 'http://localhost:8080';
+      const baseURI = 'http://localhost:8080/api';
       this.$http.post(`${baseURI}/vacation/setVacationHist`, data, headers)
       .then(res => {
         this.$emit('reRender', 'UserList')

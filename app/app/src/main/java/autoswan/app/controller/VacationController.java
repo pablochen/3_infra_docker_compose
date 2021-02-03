@@ -19,7 +19,7 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/vacation")
+@RequestMapping("/api/vacation")
 public class VacationController {
     @Autowired
     EntityManager em;

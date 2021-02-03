@@ -19,3 +19,12 @@ services:
       - spring.datasource.url=jdbc:mysql://vacation-db:3306/vacation?serverTimezone=UTC
     depends_on:
       - vacation-db
+
+  vacation-web:
+    build:
+      context: frontend/
+      dockerfile: front.Dockerfile
+    ports:
+      - 80:80
+    depends_on:
+      - vacation-app

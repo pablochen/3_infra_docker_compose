@@ -27,7 +27,7 @@ export default {
         "Content-Type": "application/json"
       }
 
-      const baseURI = 'http://localhost:8080';
+      const baseURI = 'http://localhost:8080/api';
       this.$http.get(`${baseURI}/vacation/getVacationHistList`, data, headers)
       .then((result) => {
         this.$refs.tuiGrid.invoke('clear');
@@ -55,7 +55,7 @@ export default {
         "Content-Type": "application/json"
       }
 
-      const baseURI = 'http://localhost:8080';
+      const baseURI = 'http://localhost:8080/api';
       this.$http.put(`${baseURI}/vacation/deleteVacationHists`, data, headers)
       .then(res => {
         this.$emit('reRender', 'UserList')
