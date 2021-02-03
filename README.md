@@ -8,8 +8,8 @@
   - 하나의 도커컴포즈 파일로 실행
 
 ## 개발환경
-- VueJs + npm
-- Java8 +  SpringBoot
+- Nginx + VueJs + Yarn
+- JDK8 + Jar
 - MySql 
 
 ## 빌드 및 실행
